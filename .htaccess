@@ -1,0 +1,22 @@
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://e-dizajn.com/$1 [L,R]
+
+#the code above will redirect the entire site into https without www unless the request come with https://www .      
+
+RewriteCond %{THE_REQUEST} \s/+(.*?/)?(?:index)?(.*?)\.html[\s?/] [NC]
+RewriteRule ^ /%1%2 [R=302,L,NE]
+
+#the code above will remove any .HTML.
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
