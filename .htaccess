@@ -2,7 +2,7 @@
 
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://e-dizajn.com/$1 [L,R]
+RewriteRule ^ https://www.e-dizajn.com/$1 [L,R]
 
 #the code above will redirect the entire site into https without www unless the request come with https://www .      
 
