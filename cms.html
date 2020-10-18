@@ -1,31 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+</head>
+<body>
 
-<script>
-function getData()
-{
-    //gettting the values
-    var email = document.getElementById("email").value;
-    var password= document.getElementById("password").value; 
-    var telephone= document.getElementById("telephone").value; 
-    var mobile= document.getElementById("mobile").value; 
-    //saving the values in local storage
-    localStorage.setItem("txtValue", email);
-    localStorage.setItem("txtValue1", password);
-    localStorage.setItem("txtValue2", mobile);
-    localStorage.setItem("txtValue3", telephone);   
-}
-</script>
-
-   <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
-        <form action="action.html">
-        <legend>Sign Up Form</legend>
-        <label>Email:<br />
-        <input type="text" name="email" id="email"/></label><br />
-        <label>Password<br />
-        <input type="text" name="password" id="password"/></label><br>
-        <label>Mobile:<br />
-        <input type="text" name="mobile" id="mobile"/></label><br />
-        <label>Telephone:<br />
-        <input type="text" name="telephone" id="telephone"/></label><br> 
-        <input type="submit" value="Submit" onclick="getData()">
-    </form>
+    <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+        <form action="work.html" target="_blank">
+            <legend>Add New Project</legend>        
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img" accept="image/*"><br />    
+            <label>Project Name:<br />
+            <input type="text" name="name" id="name"/></label><br />
+            <label>Project Year:<br />
+            <input type="text" name="year" id="year"/></label><br>
+            <label>Project Type:<br />
+            <input type="text" name="type" id="type"/></label><br />
+            <label>Project Url:<br />
+            <input type="text" name="url" id="url"/></label><br> 
+            <input type="submit" value="Submit" onclick="getData()">            
+        </form>
     </fieldset>
+
+    <script>
+        function getData()
+        {
+            //gettting the values
+            var name = document.getElementById("name").value;
+            var year = document.getElementById("year").value; 
+            var type = document.getElementById("type").value; 
+            var url = document.getElementById("url").value; 
+            var image = document.getElementById("img").value;
+
+
+            //saving the values in local storage
+            localStorage.setItem("txtValue", name);
+            localStorage.setItem("txtValue1", year);
+            localStorage.setItem("txtValue2", type);
+            localStorage.setItem("txtValue3", url);  
+            localStorage.setItem("txtValue4", image); 
+        }
+    </script>
+  
+
+</body>
+</html>
