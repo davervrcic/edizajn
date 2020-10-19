@@ -17,10 +17,6 @@
         
         <form action="work.html" target="_blank">
             <legend>Add New Project</legend>        
-            <!-- <label for="img">Image name:</label>
-            <input type="file" id="img" name="img" accept="image/*"><br /> -->  
-            <label>Image name:
-            <input type="text" id="img" name="img" disabled></label><br />
             <label>Project Name:
             <input type="text" name="name" id="name"/></label><br />
             <label>Project Year:
@@ -42,7 +38,7 @@
             var type = document.getElementById("type").value; 
             var url = document.getElementById("url").value; 
             //var image = document.getElementById("img").value;
-            var image = document.getElementById("img").files[0].name;
+            var image = document.getElementById("file").files[0].name;
 
 
             //saving the values in local storage
